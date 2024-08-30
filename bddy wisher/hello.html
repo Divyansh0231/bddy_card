@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birthday Card</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90vw; /* Adjust width to fit the viewport */
+        max-width: 600px; /* Maximum width of the card */
+        margin: auto;
+        perspective: 1000px;
+        border-radius: 10px;
+        overflow: hidden;
+        background: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .outside {
+        padding: 20px;
+      }
+
+      .front {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .front img {
+        width: 50%;
+        height: auto;
+        border-radius: 10px;
+        margin-top: 10px;
+      }
+
+      .cake {
+        margin-top: 20px;
+        width: 150px; /* Width of the cake */
+        height: 150px; /* Height of the cake */
+        position: relative;
+      }
+
+      .cake .middle-layer, .cake .bottom-layer {
+        width: 100%;
+        height: 50px; /* Height of each layer */
+        border-radius: 10px;
+        background-color: #f0a500; /* Cake color */
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 1;
+      }
+
+      .cake .bottom-layer {
+        top: 50px; /* Position below the middle layer */
+        background-color: #f05f40; /* Different color for bottom layer */
+      }
+
+      .cake .candle {
+        width: 10px;
+        height: 30px;
+        background-color: #ffdb4d; /* Candle color */
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 5px;
+      }
+
+      .inside {
+        padding: 20px;
+        height: 200px; /* Fixed height for scrollable content */
+        overflow-y: auto; /* Enable vertical scrolling */
+      }
+
+      .inside p {
+        font-family: 'Poppins', sans-serif;
+        text-align: justify;
+        color: #333;
+        margin: 0;
+      }
+
+      .inside h1 {
+        color: #ff4081;
+      }
+    </style>
+  </head>
+  <body onload="startConfetti()">
+    <div class="card">
+      <div class="outside">
+        <div class="front">
+          <p>"Happy Birthday dear Bhukkad"</p>
+
+          <!-- Add your image here -->
+          <img src="1.jpg" alt="Birthday Image" />
+
+          <div class="cake">
+            <div class="middle-layer"></div>
+            <div class="bottom-layer"></div>
+            <div class="candle"></div>
+          </div>
+        </div>
+        <div class="back"></div>
+      </div>
+      <div class="inside">
+        <p>
+          To my dearest Bhukkad,
+
+          Happy 24th Birthday, my love! 🎉
+          
+          It feels like just yesterday, on March 9, 2022, when our journey began. From that moment, I have been captivated by your beautiful eyes and the way your hair dances in the breeze. Every day with you fills my heart with so much joy, and I can't help but smile whenever I think of you.
+          
+          You inspire me every single day, with your determination and hard work as you prepare for your banking career. I know you're going to achieve your dream of becoming an IBPS SO very soon, and I will be right beside you, cheering you on every step of the way.
+          
+          On your special day, I just want you to know how lucky I am to have you in my life. You’ve made my world brighter, and I can’t wait for all the beautiful moments we’ll create together in the future.
+          
+          Enjoy your day to the fullest, Bhukkad! May this year bring you closer to your dreams and fill your life with happiness and love.
+
+          With all my love, Divyansh
+        </p>
+        <h1>&#127873;</h1>
+      </div>
+    </div>
+  </body>
+  <script src="confetti.js"></script>
+</html>
